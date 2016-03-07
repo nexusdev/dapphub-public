@@ -14,17 +14,34 @@
 
     body {
       font-weight: 300;
-        background-image: radial-gradient(ellipse farthest-corner at center top, hsla(230, 100%, 15%, 1) 0%, hsla(231, 90%, 1%, 1) 100%);
+      background-image: radial-gradient(ellipse farthest-corner at center top, hsla(230, 100%, 15%, 1) 0%, hsla(231, 90%, 1%, 1) 100%);
       color: #1F1639;
       letter-spacing: 1px;
+      height: 100vh;
+      width: 100vw;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
    #particles-js {
-       position: absolute;
+       position: fixed;
        height: 100vh;
        width: 100vw;
    }
 
+    .callout {
+      margin: 12rem 0 0 1rem;
+      padding: 2rem;
+      border-radius: 4px;
+      max-width: 80vw
+    }
+
+    @media screen and (max-width: 580px)  {
+      .callout {
+        margin: 4rem 0 0 1rem;
+
+      }
+    }
 
 
   </style>
@@ -32,11 +49,13 @@
   <div id="particles-js"></div>
 
     <div class="row animated fadeIn">
-      <div class="large-5 medium-6 columns">
-        <div class="callout" style="margin: 12rem 0; padding: 2rem; border-radius: 4px;">
+      <div class="large-5 medium-6 columns large-offset-2">
+        <div class="callout" style="">
           <img class="animated bounceIn" width="96" src="img/dapphub-logo.svg">
           <hr>
-          <p><b>Solidity <b>package registry</b> and <b>dapp explorer</b>.<br>Explore smart contract packages and decentralized applications.</p>
+          <p><b>Solidity package registry</b> and <b>dapp explorer</b>.<br>Explore smart contract packages and decentralized applications.</p>
+          <hr>
+          <p><script async defer src="https://slack.makerdao.com/slackin.js"></script></p>
           </div>
         </div>
       </div>
